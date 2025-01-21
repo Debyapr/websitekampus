@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>STTIKOM Insan Unggul</title>
+    <style>
+      /* Custom pastel blue color */
+      .bg-pastel-blue {
+        background-color: #000000;
+      }
+      .text-pastel-blue {
+        color: #000000;
+      }
+      .hover\:bg-pastel-blue:hover {
+        background-color: #000000;
+      }
+      .hover\:text-pastel-blue:hover {
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-gray-900 sticky top-0">
+      <nav
+        class="text-white w-11/12 md:container mx-auto py-4 flex justify-between items-center"
+      >
+        <!-- Logo dan Nama -->
+        <div class="flex items-center space-x-4">
+          <img src="https://th.bing.com/th/id/OIP.1idyU2aG2xcCzp6yOzu4tgAAAA?rs=1&pid=ImgDetMain" alt="logo" class="h-12 w-12 object-cover rounded-full"/>
+          <a href="#" class="text-3xl font-bold">STTIKOM Insan Unggul</a>
+        </div>
+    
+        <!-- Menu -->
+        <ul id="menu-list" class="menu hidden md:flex md:bg-gray-900 md:relative md:top-0 md:divide-y-0 md:w-auto shadow-lg ml-auto space-x-6">
+          <li class="px-4 py-1 hover:text-gray-500">
+            <a href="#program-studi">Program Studi</a></li>
+          <li class="px-4 py-1 hover:text-gray-500">
+            <a href="#fasilitas">Fasilitas</a></li>
+          <li class="px-4 py-1 hover:text-gray-500">
+            <a href="#tentang">Tentang Kami</a></li>
+          <li class="px-4 py-1 hover:text-gray-500 md:hover:text-white md:border-x-2 md:border-red-500 md:py-2 md:px-5 md:rounded-xl md:hover:bg-red-500 text-white">
+            <a href="#kontak">Kontak</a></li>
+        </ul>
+    
+        <!-- Hamburger Menu -->
+        <button class="hamburger-menu text-2xl md:hidden" onclick="toggleMenu()">
+          <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="hidden md:hidden bg-gray-300 divide-y divide-gray-400 shadow-lg">
+        <li class="px-7 py-3 hover:bg-gray-400">
+          <a href="#program-studi">Program Studi</a></li>
+        <li class="px-7 py-3 hover:bg-gray-400">
+          <a href="#fasilitas">Fasilitas</a></li>
+        <li class="px-7 py-3 hover:bg-gray-400">
+          <a href="#tentang">Tentang Kami</a></li>
+        <li class="px-7 py-3 hover:bg-gray-400">
+          <a href="#kontak">Kontak</a></li>
+      </ul>
+    </header>
+     
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const icon = document.getElementById("hamburger-icon");
+
+        menu.classList.toggle("hidden");
+
+        if (menu.classList.contains("hidden")) {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        } else {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        }
+      }
+    </script>  
+    <!-- hero -->
+  <section 
+  class="bg-cover bg-center bg-no-repeat h-screen relative" 
+  style="background-image: url('https://assets-a1.kompasiana.com/items/album/2022/03/16/gedungsttikomiu-lama-6231fed880a65a419a2d3b43.jpeg?t=o&v=1200');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <!-- Content -->
+  <div class="container mx-auto text-center text-white h-full flex items-center justify-center">
+      <div class="relative z-10 w-3/4 md:w-2/4">
+          <h3 class="text-5xl font-bold mb-5">Mewujudkan Pendidikan Berkualitas untuk Generasi Masa Depan</h3>
+          <p class="text-gray-300 mb-5">STTIKOM Insan Unggul berkomitmen untuk menyediakan pendidikan tinggi berkualitas yang menyiapkan mahasiswa untuk menghadapi tantangan global.</p>
+          <div class="flex justify-center gap-4">
+              <a href="#pendaftaran" class="bg-red-500 text-white py-2 px-5 rounded-xl hover:bg-blue-800 transition duration-300">Daftar</a>
+              <a href="#fasilitas" class="bg-blue-500 text-white py-2 px-5 rounded-xl hover:bg-red-800 transition duration-300">Lihat Fasilitas Kami</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+</script>
+
+<!-- program studi -->
+<section id="program-studi" class="bg-gray-200 py-20">
+    <div class="w-11/12 md:container mx-auto">
+      <h3 class="text-5xl font-bold text-center mb-5">Program Studi</h3>
+      <p class="text-gray-500 text-center mb-5">STTIKOM Insan Unggul menawarkan berbagai program studi yang siap menyiapkan mahasiswa untuk sukses di dunia profesional.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Program Studi S1-->
+        <div class="flex flex-col items-center space-y-5 py-8 px-8 bg-white rounded-xl">
+          <img src="gambar1/gambar1.jpg" class="w-[500px] h-[200px] object-cover rounded-lg" />
+          <div>
+            <h4 class="text-2xl font-bold mb-5">Program S1</h4>
+            <p class="text-gray-500 mb-5">Program studi Sarjana (S1) yang kami tawarkan dirancang untuk mengembangkan keterampilan praktis dan pengetahuan teoritis di bidang teknologi informasi dan sistem informasi. Program S1 yang kami tawarkan meliputi:</p>
+            <ul class="list-disc pl-5 text-gray-500 mb-5">
+              <li><strong>S1 Sistem Informasi</strong>: Program ini mempersiapkan mahasiswa untuk menjadi profesional di bidang teknologi informasi dan sistem informasi dengan fokus pada pengembangan sistem berbasis teknologi untuk mendukung operasional bisnis.</li>
+              <li><strong>S1 Teknik Informatika</strong>: Fokus pada pengembangan perangkat lunak, jaringan komputer, serta teknologi keamanan informasi yang diperlukan dalam dunia teknologi informasi yang semakin berkembang.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Program Studi D3-->
+        <div class="flex flex-col items-center space-y-5 py-8 px-8 bg-white rounded-xl">
+          <img src="gambar1/gambar2.jpg" class="w-[500px] h-[200px] object-cover rounded-lg" />
+          <div>
+            <h4 class="text-2xl font-bold mb-5">Program D3</h4>
+            <p class="text-gray-500 mb-5">Selain program S1, kami juga menawarkan program studi Diploma 3 (D3) yang lebih terfokus pada keterampilan praktis dan aplikasi langsung dalam dunia industri. Program D3 yang kami tawarkan meliputi:</p>
+            <ul class="list-disc pl-5 text-gray-500 mb-5">
+              <li><strong>D3 Manajemen Informatika</strong>: Program ini mempersiapkan mahasiswa untuk mengelola sistem informasi di berbagai perusahaan dan organisasi dengan keterampilan dalam analisis dan pengelolaan data.</li>
+              <li><strong>D3 Akuntansi Komputerisasi</strong>: Program ini mengajarkan mahasiswa tentang penggunaan teknologi informasi dalam akuntansi, serta pengelolaan sistem informasi akuntansi untuk membantu proses bisnis dan laporan keuangan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fasilitas" class="py-20 bg-white">
+    <h3 class="text-5xl font-bold text-center mb-5">Fasilitas Kampus</h3>
+    <p class="text-gray-500 mb-5 text-center">Kampus kami dilengkapi dengan fasilitas modern untuk mendukung pengalaman belajar yang optimal.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 w-11/12 md:container mx-auto gap-6">
+      <!-- fasilitas 1-->
+      <div class="shadow-xl">
+        <a href="#">
+          <img src="gambar1/kelas.jpeg" class="w-full w-[400px] h-[200px] border-2 border-gray-300" />
+          <div class="py-3 px-5">
+            <h4 class="text-center font-bold">Ruang Kuliah</h4>
+          </div>
+        </a>
+      </div>
+      <!-- fasilitas 2-->
+      <div class="shadow-xl">
+        <a href="#">
+          <img src="gambar1/lab.jpeg" class="w-full w-[400px] h-[200px] border-2 border-gray-300" />
+          <div class="py-3 px-5">
+            <h4 class="text-center font-bold">Laboratorium Komputer</h4>
+          </div>
+        </a>
+      </div>
+      <!-- fasilitas 3-->
+      <div class="shadow-xl">
+        <a href="#">
+          <img src="gambar1/perpus.png" class="w-full w-[400px] h-[200px] border-2 border-gray-300" />
+          <div class="py-3 px-5">
+            <h4 class="text-center font-bold">Perpustakaan Digital</h4>
+          </div>
+        </a>
+      </div>
+      <!-- fasilitas 4-->
+      <div class="shadow-xl">
+        <a href="#">
+          <img src="gambar1/parkiran.jpeg" class="w-full w-[400px] h-[200px] border-2 border-gray-300" />
+          <div class="py-3 px-5">
+            <h4 class="text-center font-bold">Lahan Parkir</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+<!-- Tentang Kami -->
+<section id="tentang" class="w-11/12 md:container mx-auto py-20">
+    <div class="bg-white shadow-lg rounded-xl p-8 md:p-10">
+      <h3 class="text-5xl font-bold text-center mb-5">Tentang Kampus Kami</h3>
+      <p class="text-gray-600 text-center mb-10 leading-relaxed">
+        Kampus yang beralamat di Jl. Bojonegara No.45, Panggung Rawi, Kec. Jombang, Kota Cilegon, Banten ini berfokus pada pengembangan akademis dan keterampilan praktis yang diperlukan untuk menghadapi tantangan dunia kerja yang terus berkembang.
+      </p>
+  
+      <!-- Visi, Misi, dan Tujuan -->
+      <div class="space-y-8">
+        <!-- Visi -->
+        <div>
+          <h4 class="text-3xl text-center font-bold mb-4">Visi</h4>
+          <p class="text-gray-600 leading-relaxed">
+            Menjadi Perguruan Tinggi yang menghasilkan Insan Unggul di bidang Teknologi Informasi dan berjiwa entrepreneur serta mampu bersaing secara profesional di tingkat nasional tahun 2028.
+          </p>
+        </div>
+  
+        <!-- Misi -->
+        <div>
+          <h4 class="text-3xl text-center font-bold mb-4">Misi</h4>
+          <ul class="list-disc pl-5 text-gray-600 space-y-3">
+            <li>Menyelenggarakan proses pembelajaran yang berbasis keunggulan dalam bidang teknologi informasi yang menjunjung tinggi nilai kebenaran dan ketakwaan.</li>
+            <li>Menyelenggarakan penelitian yang berbasis keunggulan secara mandiri atau kelompok dalam rangka pengembangan Teknologi Informasi.</li>
+            <li>Menyelenggarakan pengabdian masyarakat melalui penyebaran ilmu pengetahuan dan teknologi yang relevan dengan berfokus pada integrasi teknologi informasi.</li>
+            <li>Meningkatkan jalinan kerjasama dengan stakeholder dalam rangka peningkatan kualitas pelaksanaan tri dharma.</li>
+          </ul>
+        </div>
+  
+        <!-- Tujuan -->
+        <div>
+          <h4 class="text-3xl text-center font-bold mb-4">Tujuan STTIKOM Insan Unggul</h4>
+          <ul class="list-disc pl-5 text-gray-600 space-y-3">
+            <li>Menghasilkan lulusan dalam bidang teknologi informasi yang menjunjung tinggi nilai kebenaran dan ketakwaan.</li>
+            <li>Menghasilkan penelitian dalam bidang teknologi informasi yang dapat memberikan manfaat bagi perkembangan ilmu pengetahuan dan kehidupan masyarakat.</li>
+            <li>Terselenggaranya kegiatan pengabdian dan pemberdayaan masyarakat yang mendorong pengembangan potensi masyarakat, khususnya pada bidang teknologi informasi.</li>
+            <li>Mewujudkan sinergi antara tridharma dengan stakeholder.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="mt-10 flex justify-center space-x-5">
+        <a href="#" class="text-2xl text-gray-600 hover:text-blue-600"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-pink-600"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-2xl text-gray-600 hover:text-red-600"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+    <!-- Kontak -->
+    <section id="kontak" class="bg-pastel-blue py-20">
+        <div class="container mx-auto text-center">
+          <h3 class="text-4xl font-bold text-white mb-5">Kontak Kami</h3>
+          <p class="text-white mb-8">Jika Anda memiliki pertanyaan atau ingin berkomunikasi lebih lanjut, silakan isi form kontak di bawah ini.</p>
+          <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-xl shadow-lg">
+            <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required />
+            <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required />
+            <textarea name="pesan" placeholder="Pesan" rows="4" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required></textarea>
+            <button type="submit" class="w-full py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-700">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+  
+      <!-- Formulir Pendaftaran -->
+  <section id="pendaftaran" class="w-11/12 md:container mx-auto py-20">
+      <div class="bg-gray-100 shadow-lg rounded-xl p-8 md:p-10">
+        <h3 class="text-5xl font-bold text-center mb-5">Formulir Pendaftaran</h3>
+        <p class="text-gray-600 text-center mb-8">Silakan isi formulir di bawah ini untuk mendaftar di STTIKOM Insan Unggul.</p>
+        <form action="#" method="POST" class="max-w-3xl mx-auto space-y-5">
+          <div>
+            <label for="nama" class="block text-gray-700 mb-2 font-semibold">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-blue" required />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 mb-2 font-semibold">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email aktif" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-blue" required />
+          </div>
+          <div>
+            <label for="program" class="block text-gray-700 mb-2 font-semibold">Program Studi</label>
+            <select id="program" name="program" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-blue" required>
+              <option value="">Pilih Program Studi</option>
+              <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+              <option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
+              <option value="D3 Manajemen Informatika">D3 Manajemen Informatika</option>
+              <option value="D3 Akuntansi Komputerisasi">D3 Akuntansi Komputerisasi</option>
+            </select>
+          </div>
+          <div>
+            <label for="pesan" class="block text-gray-700 mb-2 font-semibold">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan atau pertanyaan" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-blue"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-700">Daftar Sekarang</button>
+        </form>
+      </div>
+    </section>
+  <footer class="py-5 text-center font-bold bg-gray-900 text-white">&copy; Developed by Deby</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  </body>
+</html>
